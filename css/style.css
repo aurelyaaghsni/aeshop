@@ -1,0 +1,84 @@
+:root {
+  --primary: #6b1074;
+  --bg: #000;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+  border: none;
+  text-decoration: none;
+}
+
+body {
+  font-family: "Special Gothic Expanded One", sans-serif;
+  background-color: var(--bg);
+  color: white;
+  min-height: 200px;
+}
+
+/* navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.4rem 7%;
+  background-color: var(--bg);
+  border-bottom: 5px solid var(--primary);
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 9999;
+}
+
+.navbar .navbar-logo {
+  font-size: 2.6rem;
+  font-weight: 700;
+  color: #d1d5db;
+  font-style: bold;
+}
+
+.navbar .navbar-logo span {
+  color: #9950ac;
+}
+.navbar .navbar-nav a {
+  color: #ffffff;
+  display: inline-block;
+  font-size: 1.2rem;
+  margin: 0 1rem;
+}
+
+.navbar .navbar-nav a:hover {
+  color: #ce94f5; /* ungu muda */
+  text-shadow: 0 0 5px #ce94f5, 0 0 10px #ce94f5, 0 0 20px #ce94f5, 0 0 30px #ce94f5;
+  transition: all 0.3s ease;
+}
+
+.navbar .navbar-nav a::after {
+  content: "";
+  display: block;
+  padding-bottom: 0.5rem;
+  border-bottom: 0.1rem solid var(--primary);
+  transform: scaleX(0);
+  transition: 0.2s linear;
+}
+
+.navbar .navbar-nav a:hover::after {
+  transform: scaleX(0.5);
+}
+
+.navbar .navbar-extra a {
+  color: #ffffff;
+  margin: 0 0.5rem;
+}
+
+.navbar .navbar-extra a:hover {
+  color: #ff4d4d; /* merah terang */
+  text-shadow: 0 0 5px #ff4d4d, 0 0 10px #ff1a1a, 0 0 20px #ff1a1a, 0 0 30px #ff1a1a;
+}
+
+#hamburger-menu {
+  display: none;
+}
